@@ -30,17 +30,19 @@ namespace HotelProject.DataAccessLayer.Repositories
 
         public List<T> GetList()
         {
-            throw new NotImplementedException();
+            return _context.Set<T>().ToList();
         }
 
         public void Insert(T t)
         {
-            throw new NotImplementedException();
+            _context.Add(t);
+            _context.SaveChanges();
         }
 
         public void Update(T t)
         {
-            throw new NotImplementedException();
+            _context.Update(t);
+            _context.SaveChanges();
         }
     }
 }
