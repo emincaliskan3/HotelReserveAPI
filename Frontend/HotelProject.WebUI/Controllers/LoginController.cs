@@ -19,8 +19,20 @@ namespace HotelProject.WebUI.Controllers
             return View();
         }
         [HttpPost]
-        public IActionResult Index(LoginUserDto loginUserDto)
+        public async Task<IActionResult> Index(LoginUserDto loginUserDto)
         {
+            if (ModelState.IsValid)
+            {
+                var result = await _signInManager.PasswordSignInAsync(loginUserDto.Username, loginUserDto.Password, false, false);
+                if (result.Succeeded)
+                {
+                    return RedirectToAction("Index", "Staff");
+                }
+                else
+                {
+                    return View();
+                }
+            };
             return View();
         }
     }
