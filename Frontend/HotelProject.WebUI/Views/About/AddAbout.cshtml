@@ -1,0 +1,32 @@
+﻿@model CreateAboutDto
+@{
+    ViewData["Title"] = "AddAbout";
+    Layout = "~/Views/AdminLayout/_AdminLayout.cshtml";
+}
+
+<form method="post">
+    <label>Başlık 1</label>
+    <input type="text" asp-for="Title1" class="form-control" />
+    <span asp-validation-for="Title1" class="text-danger"></span>
+    <br />
+    <label>Başlık 2</label>
+    <input type="text" asp-for="Title2" class="form-control" />
+    <span asp-validation-for="Title2" class="text-danger"></span>
+    <br />
+    <label>Content</label>
+    <input type="text" asp-for="Content" class="form-control" />
+    <span asp-validation-for="Content" class="text-danger"></span>
+    <br />
+    <label>Oda Sayısı</label>
+    <input type="text" asp-for="RoomCount" class="form-control" />
+    <span asp-validation-for="RoomCount" class="text-danger"></span>
+    <br />
+    <label>Personel</label>
+    <input type="text" asp-for="StaffCount" class="form-control" />
+    <span asp-validation-for="StaffCount" class="text-danger"></span>
+    <br />
+    <label>Müşteri Sayısı</label>
+    <input type="text" asp-for="CustomerCount" class="form-control" />
+    <span asp-validation-for="CustomerCount" class="text-danger"></span>
+    <button class="btn btn-primary">Hakkımızda Ekle</button>
+</form>
