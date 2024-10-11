@@ -13,7 +13,6 @@
         <th>Oda Sayısı</th>
         <th>Personel</th>
         <th>Müşteri Sayısı</th>
-        <th>Sil</th>
         <th>Güncelle</th>
 
     </tr>
@@ -27,12 +26,11 @@
             <td>@item.RoomCount</td>
             <td>@item.StaffCount</td>
             <td>@item.CustomerCount</td>
-            <td><a href="/About/DeleteAbout/@item.AboutID" class="btn mb-1 btn-rounded btn-outline-danger">Sil</a></td>
-            <td><a href="/About/UpdateAbout/@item.AboutID" class="btn mb-1 btn-rounded btn-outline-success">Güncelle</a></td>
+            <td><a href="/AdminAbout/UpdateAbout/@item.AboutID" class="btn mb-1 btn-rounded btn-outline-success">Güncelle</a></td>
         </tr>
     }
 </table>
-<a href="/About/AddAbout/" class="btn mb-1 btn-rounded btn-outline-info">Yeni Hakkımızda Girişi</a>
+
 
 
 

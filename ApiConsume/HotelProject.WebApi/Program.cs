@@ -11,9 +11,6 @@ builder.Services.AddDbContext<Context>();
 builder.Services.AddScoped<IStaffDal, EfStaffDal>();
 builder.Services.AddScoped<IStaffService, StaffManager>();
 
-builder.Services.AddScoped<IRoomDal, EfRoomDal>();
-builder.Services.AddScoped<IRoomService, RoomManager>();
-
 builder.Services.AddScoped<IServicesDal, EfServiceDal>();
 builder.Services.AddScoped<IServicesService, ServiceManager>();
 
@@ -31,6 +28,9 @@ builder.Services.AddScoped<IBookingService, BookingManager>();
 
 builder.Services.AddScoped<IContactDal, EfContactDal>();
 builder.Services.AddScoped<IContactService, ContactManager>();
+
+builder.Services.AddScoped<IRoomDal, EfRoomDal>();
+builder.Services.AddScoped<IRoomService, RoomManager>();
 
 builder.Services.AddAutoMapper(typeof(Program));
 // builder.Services.AddScoped
