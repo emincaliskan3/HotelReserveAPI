@@ -2,6 +2,7 @@
 using HotelProject.EntityLayer.Concrete;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using System.Net.Http;
 
 namespace HotelProject.WebApi.Controllers
 {
@@ -34,6 +35,13 @@ namespace HotelProject.WebApi.Controllers
         {
             var values = _contactService.TGetByID(id);
             return Ok(values);
+        }
+        [HttpDelete("{id}")]
+        public IActionResult DeleteContact(int id)
+        {
+            var values = _contactService.TGetByID(id);
+            _contactService.TDelete(values);
+            return Ok();
         }
 
     }
