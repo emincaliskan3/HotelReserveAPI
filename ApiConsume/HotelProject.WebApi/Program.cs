@@ -32,6 +32,9 @@ builder.Services.AddScoped<IContactService, ContactManager>();
 builder.Services.AddScoped<IRoomDal, EfRoomDal>();
 builder.Services.AddScoped<IRoomService, RoomManager>();
 
+builder.Services.AddScoped<IGuestDal, EfGuestDal>();
+builder.Services.AddScoped<IGuestService, GuestManager>();
+
 builder.Services.AddAutoMapper(typeof(Program));
 // builder.Services.AddScoped
 
