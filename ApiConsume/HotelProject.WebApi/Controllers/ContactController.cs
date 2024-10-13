@@ -43,6 +43,11 @@ namespace HotelProject.WebApi.Controllers
             _contactService.TDelete(values);
             return Ok();
         }
+        [HttpGet("GetContactCount")]
+        public IActionResult GetContactCount() 
+        {
+           return Ok(_contactService.TGetContactCount());
+        }
 
     }
 }
