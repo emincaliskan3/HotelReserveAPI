@@ -10,7 +10,6 @@ namespace HotelProject.WebUI.Controllers
     public class RegisterController : Controller
     {
         private readonly UserManager<AppUser> _userManager;
-
         public RegisterController(UserManager<AppUser> userManager)
         {
             _userManager = userManager;
@@ -33,7 +32,7 @@ namespace HotelProject.WebUI.Controllers
                 Email = createNewUserDto.Mail,
                 Surname = createNewUserDto.Surname,
                 UserName = createNewUserDto.Username,
-                City = createNewUserDto.City
+                WorkLocationID = 1
             };
             var result = await _userManager.CreateAsync(appUser, createNewUserDto.Password);
             if (result.Succeeded)
