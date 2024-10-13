@@ -22,10 +22,10 @@ namespace HotelProject.WebUI.Controllers
             var responseMessage = await client.GetAsync("http://localhost:5153/api/Contact");
 
             var client2 = _httpClientFactory.CreateClient();
-            var responseMessage2 = await client2.GetAsync("http://localhost:3523/api/Contact/GetContactCount");
+            var responseMessage2 = await client2.GetAsync("http://localhost:5153/api/Contact/GetContactCount");
 
             var client3 = _httpClientFactory.CreateClient();
-            var responseMessage3 = await client3.GetAsync("http://localhost:3523/api/SendMessage/GetSendMessageCount");
+            var responseMessage3 = await client3.GetAsync("http://localhost:5153/api/SendMessage/GetSendMessageCount");
 
             if (responseMessage.IsSuccessStatusCode)
             {
