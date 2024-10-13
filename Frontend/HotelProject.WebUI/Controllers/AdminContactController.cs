@@ -18,6 +18,7 @@ namespace HotelProject.WebUI.Controllers
 
         public async Task<IActionResult> Inbox()
         {
+
             var client = _httpClientFactory.CreateClient();
             var responseMessage = await client.GetAsync("http://localhost:5153/api/Contact");
 
@@ -37,7 +38,6 @@ namespace HotelProject.WebUI.Controllers
                 ViewBag.sendMessageCount = jsonData3;
                 return View(values);
             }
-
             return View();
         }
 

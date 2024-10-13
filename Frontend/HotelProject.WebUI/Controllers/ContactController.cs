@@ -35,6 +35,8 @@ namespace HotelProject.WebUI.Controllers
             ViewBag.v = values2;
 
             return View();
+
+
         }
 
         [HttpGet]
@@ -51,6 +53,7 @@ namespace HotelProject.WebUI.Controllers
             StringContent stringContent = new StringContent(jsonData, Encoding.UTF8, "application/json");
             await client.PostAsync("http://localhost:5153/api/Contact", stringContent);
             return RedirectToAction("Index", "Default");
+
         }
 
     }

@@ -24,11 +24,10 @@
             </div>
             <div class="col-md-6 wow fadeIn" data-wow-delay="0.1s">
                 <iframe class="position-relative rounded w-100 h-100"
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3011.591685329683!2d29.026592011497225!3d40.990420971233476!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cab9f0b8afbb1f%3A0x703cd0993370cf84!2zS2FkxLFrw7Z5IEJvxJ9hIEhleWtlbGk!5e0!3m2!1str!2str!4v1728589660695!5m2!1str!2str"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d19120.88130236753!2d29.028781846103232!3d40.995713284279056!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cab80b23ed2915%3A0x4bdfeb36fc52e4c1!2sM%C3%BCze%20Gazhane!5e0!3m2!1str!2str!4v1678799594821!5m2!1str!2str"
                         frameborder="0" style="min-height: 350px; border:0;" allowfullscreen="" aria-hidden="false"
                         tabindex="0"></iframe>
             </div>
-
             <div class="col-md-6">
                 <div class="wow fadeInUp" data-wow-delay="0.2s">
                     <form method="post" asp-action="SendMessage" asp-controller="Contact">
@@ -45,13 +44,14 @@
                                     <label for="email">Mail Adresiniz</label>
                                 </div>
                             </div>
-                            <div class="form-floating">
-                                @Html.DropDownListFor(x => x.MessageCategoryID, (List<SelectListItem>)ViewBag.v, new { @class = "form-control" })
-                                <label for="subject">Konuyu Seçiniz</label>
-                            </div>
                             <div class="col-12">
                                 <div class="form-floating">
-                                    <input type="text" class="form-control" id="subject" placeholder="Konu Başlığı" name="Subject">
+                                    @Html.DropDownListFor(x => x.MessageCategoryID, (List<SelectListItem>)ViewBag.v, new { @class = "form-control" })
+                                    <label for="subject">Konuyu Seçiniz</label>
+                                </div>
+                                <br />
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" id="subject" placeholder="Kou Başlığı" name="Subject">
                                     <label for="subject">Konu Başlığını Yazınız</label>
                                 </div>
                             </div>
