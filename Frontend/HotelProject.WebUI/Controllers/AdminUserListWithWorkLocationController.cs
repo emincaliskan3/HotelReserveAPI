@@ -1,9 +1,11 @@
 ﻿using HotelProject.WebUI.Dtos.AppUserDto;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 
 namespace HotelProject.WebUI.Controllers
 {
+
     public class AdminUserListWithWorkLocationController : Controller
     {
         private readonly IHttpClientFactory _httpClientFactory;
