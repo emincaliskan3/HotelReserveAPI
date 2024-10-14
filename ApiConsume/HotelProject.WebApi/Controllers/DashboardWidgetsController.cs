@@ -45,5 +45,6 @@ namespace HotelProject.WebApi.Controllers
             var value = _roomService.TRoomCount();
             return Ok(value);
         }
+
     }
 }
