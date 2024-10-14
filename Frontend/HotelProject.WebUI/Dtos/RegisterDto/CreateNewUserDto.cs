@@ -30,6 +30,7 @@ namespace HotelProject.WebUI.Dtos.RegisterDto
         [Required(ErrorMessage = "Cinsiyet Alanı Gereklidir")]
         public string Gender { get; set; }
         public string? WorkDepartment { get; set; }
+        public int WorkLocationID { get; set; }
 
 
     }
