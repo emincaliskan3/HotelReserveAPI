@@ -45,6 +45,7 @@ namespace HotelProject.WebUI.Controllers
         {
             var userid = (int)TempData["userid"];
             var user = _userManager.Users.FirstOrDefault(x => x.Id == userid);
+
             foreach (var item in roleAssignViewModel)
             {
                 if (item.RoleExist)
